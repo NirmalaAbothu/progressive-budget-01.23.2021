@@ -21,7 +21,7 @@ const FILES_TO_CACHE = [
 //      );
 
 self.addEventListener("install", function (evt) {
-     // pre cache image data
+     // pre cache budget data
      evt.waitUntil(
           caches
                .open(DATA_CACHE_NAME)

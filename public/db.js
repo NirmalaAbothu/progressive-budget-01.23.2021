@@ -26,7 +26,6 @@ function saveRecord(record) {
      console.log(db);
      // open a transaction on the pending object store in the budget db with readwrite access
      const transaction = db.transaction(["pending"], "readwrite");
-     // const transaction = db.transaction(["pending"], IDBTransaction.READ_WRITE);
      console.log(transaction);
      // access your pending object store
      const store = transaction.objectStore("pending");
@@ -38,7 +37,7 @@ function saveRecord(record) {
 
 function checkDatabase() {
      // open a transaction on the pending object store in the budget db
-     // const transaction = db.transaction(["pending"], IDBTransaction.READ_WRITE);
+
      const transaction = db.transaction(["pending"], "readwrite");
      // access your pending object store
      const store = transaction.objectStore("pending");
